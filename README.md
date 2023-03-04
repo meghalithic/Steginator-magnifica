@@ -4,19 +4,15 @@
 
 # Steginator
 
-
 This repo contains the code and configuration files necessary to use `Steginator`, a high-throughput morphometrics pipeline for _Steginoporella magnifica_ specimens. It is based on a combination of [DeepBryo](https://github.com/agporto/DeepBryo/) and [ml-morph](https://github.com/agporto/ml-morph)
 
-
-
 ## Updates
-03/2023  - `Steginator` is first available
 
+03/2023 - `Steginator` is first available
 
 ## Installation
 
-**Note:** As of now, macOS is not supported by `Steginator` due to lack of CUDA support. 
-
+**Note:** As of now, macOS is not supported by `Steginator` due to lack of CUDA support.
 
 Below are quick steps for installation using [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) in `Linux` or `Windows` (assuming the presence of an `NVIDIA` gpu):
 
@@ -53,7 +49,7 @@ optional arguments:
                         output folder (required)
 
   -c CLASS, --class CLASS
-                        object class of interest. 
+                        object class of interest.
                         options: only autozooid is currently supported
 
   -p PADDING [PADDING ...], --padding PADDING [PADDING ...]
@@ -71,11 +67,10 @@ optional arguments:
                         pixel-to-um scaling parameter (default = None)
 ```
 
-
-
 ## Citing Steginator
 
 Please cite the following papers if you use `Steginator` in your research:
+
 ```
 @article {DeepBryo2022,
 	author = {Di Martino, Emanuela and Berning, Bjorn and Gordon, Dennis P. and Kuklinski, Piotr and Liow, Lee Hsiang and Ramsfjell, Mali H. and Ribeiro, Henrique L. and Smith, Abigail M. and Taylor, Paul D. and Voje, Kjetil L. and Waeschenbach, Andrea and Porto, Arthur},
@@ -88,7 +83,7 @@ Please cite the following papers if you use `Steginator` in your research:
 	journal = {bioRxiv}
 }
 
-@article{ml-morph2020,
+@article {ml-morph2020,
   author = {Porto, Arthur and Voje, Kjetil L.},
   title = {ML-morph: A fast, accurate and general approach for automated detection and landmarking of biological structures in images},
   journal = {Methods in Ecology and Evolution},
@@ -103,5 +98,3 @@ Please cite the following papers if you use `Steginator` in your research:
 }
 
 ```
-
-
