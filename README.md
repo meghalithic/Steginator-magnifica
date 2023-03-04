@@ -73,7 +73,7 @@ Please cite the following papers if you use `Steginator` in your research:
 
 ```
 @article {DeepBryo2022,
-	author = {Di Martino, Emanuela and Berning, Bjorn and Gordon, Dennis P. and Kuklinski, Piotr and Liow, Lee Hsiang and Ramsfjell, Mali H. and Ribeiro, Henrique L. and Smith, Abigail M. and Taylor, Paul D. and Voje, Kjetil L. and Waeschenbach, Andrea and Porto, Arthur},
+  author = {Di Martino, Emanuela and Berning, Bjorn and Gordon, Dennis P. and Kuklinski, Piotr and Liow, Lee Hsiang and Ramsfjell, Mali H. and Ribeiro, Henrique L. and Smith, Abigail M. and Taylor, Paul D. and Voje, Kjetil L. and Waeschenbach, Andrea and Porto, Arthur},
 	title = {DeepBryo: a web app for AI-assisted morphometric characterization of cheilostome bryozoans},
 	year = {2022},
 	doi = {10.1101/2022.11.17.516938},
@@ -90,10 +90,8 @@ Please cite the following papers if you use `Steginator` in your research:
   volume = {11},
   number = {4},
   pages = {500-512},
-  keywords = {automation, biological structures, dense phenotyping, landmarks, machine learning, morphometrics, phenotyping pipeline, zooids},
   doi = {https://doi.org/10.1111/2041-210X.13373},
   url = {https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13373},
-  eprint = {https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.13373},
   year = {2020}
 }
 
