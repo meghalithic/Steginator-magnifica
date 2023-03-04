@@ -1,0 +1,14 @@
+matplotlib
+mmpycocotools
+numpy
+six
+terminaltables
+timm
+opencv-python
+pandas
+streamlit
+streamlit-drawable-canvas
+pillow
+pycocotools
+xgboost==1.5.2
+scikit-learn
