@@ -74,13 +74,13 @@ Please cite the following papers if you use `Steginator` in your research:
 ```
 @article {DeepBryo2022,
   author = {Di Martino, Emanuela and Berning, Bjorn and Gordon, Dennis P. and Kuklinski, Piotr and Liow, Lee Hsiang and Ramsfjell, Mali H. and Ribeiro, Henrique L. and Smith, Abigail M. and Taylor, Paul D. and Voje, Kjetil L. and Waeschenbach, Andrea and Porto, Arthur},
-	title = {DeepBryo: a web app for AI-assisted morphometric characterization of cheilostome bryozoans},
-	year = {2022},
-	doi = {10.1101/2022.11.17.516938},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2022/11/17/2022.11.17.516938},
-	eprint = {https://www.biorxiv.org/content/early/2022/11/17/2022.11.17.516938.full.pdf},
-	journal = {bioRxiv}
+  title = {DeepBryo: a web app for AI-assisted morphometric characterization of cheilostome bryozoans},
+  year = {2022},
+  doi = {10.1101/2022.11.17.516938},
+  publisher = {Cold Spring Harbor Laboratory},
+  URL = {https://www.biorxiv.org/content/early/2022/11/17/2022.11.17.516938},
+  eprint = {https://www.biorxiv.org/content/early/2022/11/17/2022.11.17.516938.full.pdf},
+  journal = {bioRxiv}
 }
 
 @article {ml-morph2020,
