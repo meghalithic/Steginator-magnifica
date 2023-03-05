@@ -23,7 +23,7 @@ def main(args):
     autofilter = pickle.load(open("./inference/automated_filtering.dat", "rb"))
 
     # Load the dlib shape predictor
-    shape_predictor = dlib.shape_predictor("./inference/shape_predictor.dat")
+    shape_predictor = dlib.shape_predictor("./inference/landmark.dat")
 
     # Define the classes of interest and the extensions of the images
     extensions = {".jpg", ".jpeg", ".tif", ".png", ".bmp"}
