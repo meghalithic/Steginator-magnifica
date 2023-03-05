@@ -1,2 +1,2 @@
 inference/deepbryo.pth filter=lfs diff=lfs merge=lfs -text
-resources/landmark.dat filter=lfs diff=lfs merge=lfs -text
+resources/*.dat filter=lfs diff=lfs merge=lfs -text
