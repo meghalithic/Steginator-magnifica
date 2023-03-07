@@ -16,7 +16,7 @@ This repo contains the code and configuration files necessary to use `Steginator
 
 Below are quick steps for installation using [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) in `Linux` or `Windows` (assuming the presence of an `NVIDIA` gpu):
 
-```
+```bash
 conda create -n steginator python=3.7 pytorch=1.10 cudatoolkit=11.3 torchvision==0.11 -c pytorch -y
 conda activate steginator
 pip3 install openmim
@@ -30,13 +30,13 @@ pip3 install -e .
 
 You can use `Steginator` as a command line tool. Simply use the following command:
 
-```
+```bash
 python steginator.py -i INPUT_DIR -o OUT_DIR [other optional arguments]
 ```
 
 The parameters associated with the cli tool mirror the web app and are:
 
-```
+```console
 usage: steginator.py [-h] -i INPUT_DIR -o OUT_DIR [-c CLASS] [-p PADDING [PADDING ...]] [-t CONFIDENCE] [-s STRICTNESS]
 
 optional arguments:
@@ -71,7 +71,7 @@ optional arguments:
 
 Please cite the following papers if you use `Steginator` in your research:
 
-```
+```bibtex
 @article {DeepBryo2022,
   author = {Di Martino, Emanuela and Berning, Bjorn and Gordon, Dennis P. and Kuklinski, Piotr and Liow, Lee Hsiang and Ramsfjell, Mali H. and Ribeiro, Henrique L. and Smith, Abigail M. and Taylor, Paul D. and Voje, Kjetil L. and Waeschenbach, Andrea and Porto, Arthur},
   title = {DeepBryo: a web app for AI-assisted morphometric characterization of cheilostome bryozoans},
