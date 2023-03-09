@@ -67,6 +67,12 @@ optional arguments:
                         pixel-to-um scaling parameter (default = None)
 ```
 
+## Choice of landmarks
+1)  the opercular pivots (one on each side)
+2)  the median process (broken in most cases, but the base still noticeable in most)
+3) the depression along the front shield
+4) and the rim around the opesia
+
 ## Citing Steginator
 
 Please cite the following papers if you use `Steginator` in your research:
