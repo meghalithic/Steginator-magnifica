@@ -15,49 +15,65 @@ require(lmodel2)
 require(stringr)
 
 #### LOAD DATA ----
-bryo.images <- read.table("./Data/Steginoporella_magnifica_image_metadata_17Apr2023.csv",
+bryo.meta <- read.table("image_merge_txt_usingfileName_DONE_17Apr2023.csv",
                           header = TRUE,
                           sep = ";")
-
-remove.images ## ADD DATASET FOR THIS
+img.rm <- read.table("low_quality_images.csv",
+                     header = TRUE, 
+                     sep = ";")
+wrg.sp <- read.table("wrong_species.csv",
+                     header = TRUE,
+                     sep = ";")
 
 #### CREATE LIST OF FILE NAMES ----
 #READ ALL AND CREATE LIST
 
-#### FILTER METADATA ----
+l.img <- list.files(path = "/media/voje-lab/bryozoa/imaging/Stegino_images/combined-jpg",
+                    full.names = TRUE,
+                    recursive = TRUE)
 
-nrow(bryo.images) #1890
+img.path <- unlist(l.img)
+length(img.path) #1890
 
-bryo.images.30 <- bryo.images[bryo.images$Magnification == 30,]
-nrow(bryo.images.30) #1835
+img.tr <- gsub(img.path,
+               pattern = "/media/voje-lab/bryozoa/imaging/Stegino_images/combined-jpg/",
+               replacement = "")
 
-bryo.images.removed <- bryo.images[bryo.images$Magnification != 30,]
+img.parse <- str_split(img.tr,
+                       pattern = "/")
 
-##### add in full file name #####
-bryo.images.30$fileName.tif <- paste0(bryo.images.30$fileName, ".tif")
+fileNames <- c()
+for(i in 1:length(img.parse)){
+  fileNames[i] <- img.parse[[i]]
+}
 
-#### CREATE OLD FILE NAMES - DELETE LATER ####
-recon.df <- read.table("./Data/image_merge_txt_usingfileName_DONE_17Apr2023.csv",
-                       header = TRUE, sep = ";")
+imgName <- str_extract(fileNames,
+                       pattern = "[^.]+")
 
-setdiff(recon.df$newFileName, bryo.images$fileName) #none
-setdiff(bryo.images$fileName, recon.df$newFileName) #none
+img.list <- as.data.frame(cbind(fileNames, imgName))
 
-##### combine files to get path #####
-recon.df.path <- recon.df[, c("newFileName", "path.tif")]
-bryo.images.path <- merge(bryo.images.30, recon.df.path,
-                          by.x = "fileName", by.y = "newFileName",
-                          all.x = TRUE, all.y = FALSE)
-nrow(bryo.images.path)
-#duplicates to reconcile manually
+#### CREATE LIST OF FILES TO REMOVE ----
 
-write.csv(bryo.images.removed,
-          "./Data/imagesRemoved.csv",
+img.rm.list <- str_extract(img.rm$file.name,
+                           pattern = "[^.]+") #344
+
+wr.sp.list <- str_extract(wrg.sp$file.name,
+                          pattern = "[^.]+") #35
+
+mag.rm.list <- bryo.meta$image[bryo.meta$Magnification != 30] #36
+
+#### FILTER IMAGES ----
+
+img.filter <- img.list[!(img.list$imgName %in% img.rm.list),] #1549
+
+img.filter <- img.filter[!(img.filter$imgName %in% wr.sp.list),] #1515
+
+img.filter <- img.filter[!(img.filter$imgName %in% mag.rm.list),] #1467
+
+length(unique(img.filter$fileNames)) #1467
+
+#### WRITE OUT FILTERED DF ----
+
+write.csv(img.filter,
+          "filteredImages.csv",
           row.names = FALSE)
-
-write.csv(bryo.images.path,
-          "./Data/filteredImageswithDupes.csv",
-          row.names = FALSE)
-#add dupes to new file
-#some file paths matched an image taken by Mali to Sara's folder and vice versa
-#some images were duplicates and differed by image name LH or MHR; kept the LH file names
