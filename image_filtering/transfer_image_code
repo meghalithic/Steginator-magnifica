@@ -1,0 +1,2 @@
+rsync --files-from=/home/voje-lab/Documents/GitHub/bryozoa/Steginator-magnifica/image_filtering/img_list.txt /media/voje-lab/bryozoa/imaging/Stegino_images/combined-jpg/ /home/voje-lab/Documents/GitHub/bryozoa/Steginator-magnifica/bryozoa_lab_images/
+
