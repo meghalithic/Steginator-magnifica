@@ -1,0 +1,2 @@
+python steginator.py -i bryozoa_lab_images/ -o ~/Documents/GitHub/bryozoa/Steginator-magnifica/
+
