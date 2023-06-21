@@ -1,2 +1,7 @@
 python steginator.py -i bryozoa_lab_images/ -o ~/Documents/GitHub/bryozoa/Steginator-magnifica/
 
+python
+from utils import dlib_xml_to_pandas
+#ignore apex is not installed
+dlib_xml_to_pandas('output.xml')
+
