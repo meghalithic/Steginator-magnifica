@@ -73,6 +73,9 @@ def dlib_xml_to_pandas(xml_file: str):
     for images in root:
         for image in images:
             for box in image:
+            #check if the box has the 'ignore' attribute set to '1'
+                if 'ignore' in box.attrib and box.attrib['ignore'] == '1':
+            	    continue #skip this box and move to the next one
                 bbox = f"{box.attrib['top']}_{box.attrib['left']}_{box.attrib['width']}_{box.attrib['height']}"
                 for parts in box:
                     if parts.attrib["name"] is not None:
