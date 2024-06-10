@@ -21,9 +21,8 @@ conda create -n steginator python=3.7 pytorch=1.10 cudatoolkit=11.3 torchvision=
 conda activate steginator
 pip3 install openmim
 mim install mmcv-full==1.4.0
-git clone https://github.com/agporto/Steginator.git
-cd Steginator
 pip3 install -e .
+pip3 install dlib>=19.7.0
 ```
 
 ## Usage
