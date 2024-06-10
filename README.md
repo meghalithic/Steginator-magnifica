@@ -33,6 +33,11 @@ You can use `Steginator` as a command line tool. Simply use the following comman
 python steginator.py -i INPUT_DIR -o OUT_DIR [other optional arguments]
 ```
 
+_Example_
+```bash
+python steginator.py -i ~/Desktop/BLEED-jpg -o ~/Documents/GitHub/bryozoa/Steginator-magnifica
+```
+
 The parameters associated with the cli tool mirror the web app and are:
 
 ```console
