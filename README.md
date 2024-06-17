@@ -71,6 +71,17 @@ optional arguments:
                         pixel-to-um scaling parameter (default = None)
 ```
 
+### Visualization
+``` /.imglab output.xml```
+
+### Convert to csv
+```
+python
+from utils import dlib_xml_to_pandas
+#ignore apex is not installed
+dlib_xml_to_pandas('output.xml')
+```
+
 ## Choice of landmarks
 1)  the opercular pivots (one on each side)
 2)  the median process (broken in most cases, but the base still noticeable in most)
