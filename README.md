@@ -72,7 +72,7 @@ optional arguments:
 ```
 
 ### Visualization
-``` /.imglab output.xml```
+``` ./imglab output.xml```
 
 ### Convert to csv
 ```
